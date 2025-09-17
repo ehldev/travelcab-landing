@@ -44,55 +44,83 @@
             <!-- Body / Form -->
             <form class="px-10 pb-12 pt-4 mt-4 space-y-4" @submit.prevent="submit">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <!-- Nombre -->
                 <label class="block">
                   <span class="sr-only">Nombre</span>
                   <input
-                    v-model="form.nombre"
+                    v-model.trim="form.nombre"
                     type="text"
                     placeholder="Nombre"
-                    class="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
-                    required
+                    @blur="v$.form.nombre.$touch()"
+                    :aria-invalid="v$.form.nombre.$error"
+                    class="w-full rounded-xl bg-white/5 border px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
+                    :class="v$.form.nombre.$error ? 'border-red-500/70' : 'border-white/10'"
                   />
+                  <p v-if="v$.form.nombre.$error" class="mt-1 text-xs text-red-400">
+                    {{ nombreMsg }}
+                  </p>
                 </label>
 
+                <!-- Email -->
                 <label class="block">
                   <span class="sr-only">Correo electrónico</span>
                   <input
-                    v-model="form.email"
+                    v-model.trim="form.email"
                     type="email"
                     placeholder="Correo electrónico"
-                    class="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
-                    required
+                    @blur="v$.form.email.$touch()"
+                    :aria-invalid="v$.form.email.$error"
+                    class="w-full rounded-xl bg-white/5 border px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
+                    :class="v$.form.email.$error ? 'border-red-500/70' : 'border-white/10'"
                   />
+                  <p v-if="v$.form.email.$error" class="mt-1 text-xs text-red-400">
+                    {{ emailMsg }}
+                  </p>
                 </label>
 
+                <!-- RUC (opcional) -->
                 <label class="block">
                   <span class="sr-only">RUC</span>
                   <input
-                    v-model="form.ruc"
+                    v-model.trim="form.ruc"
                     type="text"
                     placeholder="RUC"
-                    class="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
+                    @blur="v$.form.ruc.$touch()"
+                    :aria-invalid="v$.form.ruc.$error"
+                    class="w-full rounded-xl bg-white/5 border px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
+                    :class="v$.form.ruc.$error ? 'border-red-500/70' : 'border-white/10'"
                   />
+                  <p v-if="v$.form.ruc.$error" class="mt-1 text-xs text-red-400">
+                    Debe tener 11 dígitos numéricos.
+                  </p>
                 </label>
 
+                <!-- Celular -->
                 <label class="block">
                   <span class="sr-only">Celular</span>
                   <input
-                    v-model="form.telefono"
+                    v-model.trim="form.telefono"
                     type="tel"
                     placeholder="Celular"
-                    class="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
+                    @blur="v$.form.telefono.$touch()"
+                    :aria-invalid="v$.form.telefono.$error"
+                    class="w-full rounded-xl bg-white/5 border px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
+                    :class="v$.form.telefono.$error ? 'border-red-500/70' : 'border-white/10'"
                   />
+                  <p v-if="v$.form.telefono.$error" class="mt-1 text-xs text-red-400">
+                    Ingresa solo dígitos (mín. 6).
+                  </p>
                 </label>
               </div>
 
+              <!-- Mensaje -->
               <label class="block">
                 <span class="sr-only">Mensaje</span>
                 <textarea
-                  v-model="form.mensaje"
+                  v-model.trim="form.mensaje"
                   rows="3"
                   placeholder="Indica tu consulta o mensaje"
+                  @blur="v$.form.mensaje.$touch()"
                   class="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
                 ></textarea>
               </label>
@@ -100,7 +128,8 @@
               <div class="flex items-center justify-between gap-3 pt-1">
                 <button
                   type="submit"
-                  class="w-full d-flex justift-center items-center gap-2 rounded-3xl bg-[#10B981] px-4 py-2.5 font-medium text-white hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                  :disabled="v$.$invalid && v$.$dirty"
+                  class="w-full d-flex justift-center items-center gap-2 rounded-3xl bg-[#10B981] px-4 py-2.5 font-medium text-white hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Solicitar
                 </button>
@@ -114,12 +143,11 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, watch, onMounted } from 'vue'
+import { reactive, onMounted, onBeforeUnmount, computed, watch } from 'vue'
+import useVuelidate from '@vuelidate/core'
+import { required, email, minLength, helpers } from '@vuelidate/validators'
 
-const props = defineProps<{
-  open: boolean
-}>()
-
+const props = defineProps<{ open: boolean }>()
 const emit = defineEmits<{
   (e: 'update:open', value: boolean): void
   (e: 'submit', payload: Record<string, string>): void
@@ -135,47 +163,70 @@ const form = reactive({
   mensaje: ''
 })
 
+/* Validadores */
+const onlyDigits = helpers.regex(/^\d+$/) // solo números
+const rucOptional = (value: string) => !value || /^\d{11}$/.test(value)
+
+const rules = computed(() => ({
+  form: {
+    nombre: { required, minLength: minLength(2) },
+    email: { required, email },
+    ruc: { rucOptional: helpers.withMessage('RUC inválido', rucOptional) },
+    telefono: { required, onlyDigits, minLength: minLength(6) },
+    mensaje: {}
+  }
+}))
+
+const v$ = useVuelidate(rules, { form })
+
+/* Mensajes */
+const nombreMsg = computed(() => {
+  if (!v$.value.form.nombre.$dirty) return ''
+  if (v$.value.form.nombre.required.$invalid) return 'El nombre es obligatorio.'
+  if (v$.value.form.nombre.minLength.$invalid) return 'Mínimo 2 caracteres.'
+  return ''
+})
+
+const emailMsg = computed(() => {
+  if (!v$.value.form.email.$dirty) return ''
+  if (v$.value.form.email.required.$invalid) return 'El correo es obligatorio.'
+  if (v$.value.form.email.email.$invalid) return 'Formato de correo inválido.'
+  return ''
+})
+
 const close = () => emit('update:open', false)
 
-const submit = () => {
+const submit = async () => {
+  const ok = await v$.value.$validate()
+  if (!ok) return
   emit('submit', { ...form })
+  v$.value.$reset()
   close()
 }
 
-watch(
-  () => props.open,
-  (v) => {
-    // Simple bloqueo de scroll del body
-    document.documentElement.style.overflow = v ? 'hidden' : ''
-  },
-  { immediate: true }
-)
+/* Evitar error SSR al tocar document/window */
+const lockScroll = (lock: boolean) => {
+  if (typeof document === 'undefined') return
+  document.documentElement.style.overflow = lock ? 'hidden' : ''
+}
 
 onMounted(() => {
-  // Limpieza por si el componente se desmonta con el modal abierto
-  window.addEventListener('beforeunload', () => {
-    document.documentElement.style.overflow = ''
+  const stop = watch(() => props.open, (v) => lockScroll(v), { immediate: true })
+  const handler = () => lockScroll(false)
+  window.addEventListener('beforeunload', handler)
+
+  onBeforeUnmount(() => {
+    stop()
+    window.removeEventListener('beforeunload', handler)
+    lockScroll(false)
   })
 })
 </script>
 
 <style scoped>
 /* Transitions */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 200ms ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-.scale-enter-active,
-.scale-leave-active {
-  transition: transform 200ms ease, opacity 200ms ease;
-}
-.scale-enter-from,
-.scale-leave-to {
-  transform: scale(0.98);
-  opacity: 0;
-}
+.fade-enter-active, .fade-leave-active { transition: opacity 200ms ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+.scale-enter-active, .scale-leave-active { transition: transform 200ms ease, opacity 200ms ease; }
+.scale-enter-from, .scale-leave-to { transform: scale(0.98); opacity: 0; }
 </style>

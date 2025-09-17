@@ -26,10 +26,10 @@ onMounted(() => {
   const route = useRoute()
   const { locale, setLocale } = useI18n()
 
-  if (route.path.startsWith('/en')) {
-    setLocale('en')
-  } else {
+  if (route.path.startsWith('/es')) {
     setLocale('es')
+  } else {
+    setLocale('en')
   }
 })
 // Verificar con el router si en la URL existe el parametro "en" en ese caso cambiar el idioma

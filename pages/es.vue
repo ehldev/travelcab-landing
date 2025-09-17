@@ -19,16 +19,16 @@ const og = 'https://wize.pe/wp-content/uploads/2025/09/logo-travelcab.png'
 const url = 'https://travelcab.net/' // URL canonical de la home ES
 
 useSeoMeta({
-  title: 'Travelcab — Premium Transport in Lima',
-  description: 'Travelcab: safe and reliable transport in Lima. Black SUVs, professional drivers, 24/7 service. Book online now.',
-  ogTitle: 'Travelcab — Premium Transport in Lima',
-  ogDescription: 'Travelcab: safe and reliable transport in Lima. Black SUVs, professional drivers, 24/7 service. Book online now.',
+  title: 'Travelcab — Transporte Premium en Lima',
+  description: 'Travelcab: transporte seguro y confiable en Lima. SUVs negras, conductores profesionales y atención 24/7. Reserva online ahora.',
+  ogTitle: 'Travelcab — Transporte Premium en Lima',
+  ogDescription: 'Travelcab: transporte seguro y confiable en Lima. SUVs negras, conductores profesionales y atención 24/7. Reserva online ahora.',
   ogType: 'website',
   ogUrl: url,
   ogSiteName: 'Travelcab',
-  ogImage: og,
+  ogImage: og,              // ← imagen OG
   twitterCard: 'summary_large_image',
-  twitterImage: og
+  twitterImage: og          // ← imagen para Twitter
 })
 
 // const { t, locale, setLocale, localePath } = useI18n()

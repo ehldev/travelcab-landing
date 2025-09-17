@@ -59,7 +59,39 @@
   },
   "testimonials": {
     "title": "What travelers say about Travelcab",
-    "link": "See more reviews on TripAdvisor"
+    "link": "See more reviews on TripAdvisor",
+    "list": [
+      {
+        "name": "Beatriz S",
+        "subtitle": "Professional and courteous transportation service",
+        "description": "Our airport transfer was fast, courteous, and professional! The ride was smooth, and our driver provided helpful tips about the new airport. He was very helpful with our luggage. Thank you! I recommend Travelcab Peru for your transfers in Lima!"
+      },
+      {
+        "name": "Cika D",
+        "subtitle": "Excellent service",
+        "description": "Enzo was very kind and answered any questions we had. He was very professional. I would highly recommend him and the company."
+      },
+      {
+        "name": "Franco Z",
+        "subtitle": "Very comfortable, 100% recommended",
+        "description": "Excellent round-trip airport transfer service, punctual and very comfortable cars. 100% recommended. I’ve been using it for all my airport trips for 8 months now."
+      },
+      {
+        "name": "Katherin",
+        "subtitle": "5-star service",
+        "description": "Everything was perfect, the car was very clean, the driver was very kind and helped me with my luggage. My flight was slightly delayed and they kindly waited for me. Truly a 5-star service."
+      },
+      {
+        "name": "Olga R",
+        "subtitle": "Viva Peru!!",
+        "description": "Beautiful Peru, I will be back. The taxi that took me was excellent, very modern cars and the drivers were very neat. The places I visited were beautiful. I loved the zoo. Such beautiful animals!! Very well cared for. I was left wanting to eat more ceviche."
+      },
+      {
+        "name": "Pamela A",
+        "subtitle": "Excellent",
+        "description": "Everything was great, the service was coordinated in advance, they arrived on time, waited for us, helped with the luggage, checked the route, flight schedule, and airport entry. First-class service."
+      }
+    ]
   },
   "support": {
     "title": "Uninterrupted support in Lima",

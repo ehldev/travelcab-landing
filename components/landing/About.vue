@@ -40,4 +40,9 @@ import ContactModal from '~/components/landing/ContactModal.vue'
 const { t } = useI18n()
 
 const isOpen = ref(false)
+
+const handleSubmit = () => {
+  console.log('Formulario enviado:')
+  // Aquí puedes llamar a tu API / n8n, etc.
+}
 </script>

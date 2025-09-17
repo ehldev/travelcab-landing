@@ -16,10 +16,10 @@
                 <!-- Item -->
                 <figure class="card p-6" data-aos="fade-up" data-aos-delay="0">
                     <div class="flex items-center gap-3">
-                        <img src="https://i.pravatar.cc/80?img=12" alt="Avatar de cliente"
+                        <img src="@/assets/images/testimonials/beatriz-s.jpg" alt="Avatar de cliente"
                             class="h-10 w-10 rounded-full object-cover" loading="lazy" decoding="async">
                         <figcaption>
-                            <div class="font-semibold text-slate-900 leading-tight">Cika D</div>
+                            <div class="font-semibold text-slate-900 leading-tight">{{ t('testimonials.list.0.name') }}</div>
                             <div class="text-xs text-slate-500">Desde TripAdvisor</div>
                         </figcaption>
                     </div>
@@ -29,10 +29,9 @@
                             class="ri-star-fill"></i><i class="ri-star-fill"></i>
                     </div>
 
-                    <h3 class="mt-3 text-lg font-semibold text-slate-900">Excelente servicio</h3>
+                    <h3 class="mt-3 text-lg font-semibold text-slate-900">{{ t('testimonials.list.0.subtitle') }}</h3>
                     <p class="mt-2 text-slate-600">
-                        Enzo fue muy amable y respondió a todas nuestras preguntas. Muy profesional. Lo recomendaría
-                        enormemente.
+                        {{ t('testimonials.list.0.description') }}
                     </p>
 
                     <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
@@ -44,10 +43,10 @@
                 <!-- Item -->
                 <figure class="card p-6" data-aos="fade-up" data-aos-delay="50">
                     <div class="flex items-center gap-3">
-                        <img src="https://i.pravatar.cc/80?img=22" alt="Avatar de cliente"
+                        <img src="@/assets/images/testimonials/zika-d.jpg" alt="Avatar de cliente"
                             class="h-10 w-10 rounded-full object-cover" loading="lazy">
                         <figcaption>
-                            <div class="font-semibold text-slate-900 leading-tight">María P</div>
+                            <div class="font-semibold text-slate-900 leading-tight">{{ t('testimonials.list.1.name') }}</div>
                             <div class="text-xs text-slate-500">Desde TripAdvisor</div>
                         </figcaption>
                     </div>
@@ -55,10 +54,8 @@
                         <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
                             class="ri-star-fill"></i><i class="ri-star-fill"></i>
                     </div>
-                    <h3 class="mt-3 text-lg font-semibold text-slate-900">Puntuales y muy atentos</h3>
-                    <p class="mt-2 text-slate-600">Llegamos tarde en la noche y nos esperaron con un cartel. SUV
-                        impecable y
-                        conductor muy profesional.</p>
+                    <h3 class="mt-3 text-lg font-semibold text-slate-900">{{ t('testimonials.list.1.subtitle') }}</h3>
+                    <p class="mt-2 text-slate-600">{{ t('testimonials.list.1.description') }}</p>
                     <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
                         class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-tc-blue hover:underline">Leer
                         más <i class="ri-arrow-right-up-line"></i></a>
@@ -67,10 +64,10 @@
                 <!-- Item -->
                 <figure class="card p-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center gap-3">
-                        <img src="https://i.pravatar.cc/80?img=45" alt="Avatar de cliente"
+                        <img src="@/assets/images/testimonials/franco-z.jpg" alt="Avatar de cliente"
                             class="h-10 w-10 rounded-full object-cover" loading="lazy">
                         <figcaption>
-                            <div class="font-semibold text-slate-900 leading-tight">Jacob R</div>
+                            <div class="font-semibold text-slate-900 leading-tight">{{ t('testimonials.list.2.name') }}</div>
                             <div class="text-xs text-slate-500">Desde TripAdvisor</div>
                         </figcaption>
                     </div>
@@ -78,10 +75,8 @@
                         <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
                             class="ri-star-fill"></i><i class="ri-star-fill"></i>
                     </div>
-                    <h3 class="mt-3 text-lg font-semibold text-slate-900">Seguro y confiable</h3>
-                    <p class="mt-2 text-slate-600">Viajé solo por trabajo. Me sentí seguro en todo momento. Muy
-                        recomendado para
-                        ejecutivos.</p>
+                    <h3 class="mt-3 text-lg font-semibold text-slate-900">{{ t('testimonials.list.2.subtitle') }}</h3>
+                    <p class="mt-2 text-slate-600">{{ t('testimonials.list.2.description') }}</p>
                     <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
                         class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-tc-blue hover:underline">Leer
                         más <i class="ri-arrow-right-up-line"></i></a>
@@ -90,10 +85,10 @@
                 <!-- Item -->
                 <figure class="card p-6" data-aos="fade-up" data-aos-delay="150">
                     <div class="flex items-center gap-3">
-                        <img src="https://i.pravatar.cc/80?img=15" alt="Avatar de cliente"
+                        <img src="@/assets/images/testimonials/katherine.jpg" alt="Avatar de cliente"
                             class="h-10 w-10 rounded-full object-cover" loading="lazy">
                         <figcaption>
-                            <div class="font-semibold text-slate-900 leading-tight">Lucía A</div>
+                            <div class="font-semibold text-slate-900 leading-tight">{{ t('testimonials.list.3.name') }}</div>
                             <div class="text-xs text-slate-500">Desde TripAdvisor</div>
                         </figcaption>
                     </div>
@@ -101,10 +96,8 @@
                         <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
                             class="ri-star-fill"></i><i class="ri-star-fill"></i>
                     </div>
-                    <h3 class="mt-3 text-lg font-semibold text-slate-900">Excelente atención</h3>
-                    <p class="mt-2 text-slate-600">Coordinación por WhatsApp súper rápida. El chofer nos ayudó con las
-                        maletas y
-                        recomendaciones en Lima.</p>
+                    <h3 class="mt-3 text-lg font-semibold text-slate-900">{{ t('testimonials.list.3.subtitle') }}</h3>
+                    <p class="mt-2 text-slate-600">{{ t('testimonials.list.3.description') }}</p>
                     <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
                         class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-tc-blue hover:underline">Leer
                         más <i class="ri-arrow-right-up-line"></i></a>
@@ -113,10 +106,10 @@
                 <!-- Item -->
                 <figure class="card p-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-center gap-3">
-                        <img src="https://i.pravatar.cc/80?img=28" alt="Avatar de cliente"
+                        <img src="@/assets/images/testimonials/olga.jpg" alt="Avatar de cliente"
                             class="h-10 w-10 rounded-full object-cover" loading="lazy">
                         <figcaption>
-                            <div class="font-semibold text-slate-900 leading-tight">Daniel S</div>
+                            <div class="font-semibold text-slate-900 leading-tight">{{ t('testimonials.list.4.name') }}</div>
                             <div class="text-xs text-slate-500">Desde TripAdvisor</div>
                         </figcaption>
                     </div>
@@ -124,10 +117,8 @@
                         <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
                             class="ri-star-fill"></i><i class="ri-star-fill"></i>
                     </div>
-                    <h3 class="mt-3 text-lg font-semibold text-slate-900">Ideal para familias</h3>
-                    <p class="mt-2 text-slate-600">Silla para niño, agua a bordo y SUV cómoda. Gran experiencia al salir
-                        del
-                        aeropuerto.</p>
+                    <h3 class="mt-3 text-lg font-semibold text-slate-900">{{ t('testimonials.list.4.subtitle') }}</h3>
+                    <p class="mt-2 text-slate-600">{{ t('testimonials.list.4.description') }}</p>
                     <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
                         class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-tc-blue hover:underline">Leer
                         más <i class="ri-arrow-right-up-line"></i></a>
@@ -136,10 +127,10 @@
                 <!-- Item -->
                 <figure class="card p-6" data-aos="fade-up" data-aos-delay="250">
                     <div class="flex items-center gap-3">
-                        <img src="https://i.pravatar.cc/80?img=7" alt="Avatar de cliente"
+                        <img src="@/assets/images/testimonials/pamela.jpg" alt="Avatar de cliente"
                             class="h-10 w-10 rounded-full object-cover" loading="lazy">
                         <figcaption>
-                            <div class="font-semibold text-slate-900 leading-tight">Sophie L</div>
+                            <div class="font-semibold text-slate-900 leading-tight">{{ t('testimonials.list.5.name') }}</div>
                             <div class="text-xs text-slate-500">Desde TripAdvisor</div>
                         </figcaption>
                     </div>
@@ -147,9 +138,8 @@
                         <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
                             class="ri-star-fill"></i><i class="ri-star-fill"></i>
                     </div>
-                    <h3 class="mt-3 text-lg font-semibold text-slate-900">Profesionales y cordiales</h3>
-                    <p class="mt-2 text-slate-600">Muy buenos conductores y autos impecables. Volvería a reservar sin
-                        dudar.</p>
+                    <h3 class="mt-3 text-lg font-semibold text-slate-900">{{ t('testimonials.list.5.subtitle') }}</h3>
+                    <p class="mt-2 text-slate-600">{{ t('testimonials.list.5.description') }}</p>
                     <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
                         class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-tc-blue hover:underline">Leer
                         más <i class="ri-arrow-right-up-line"></i></a>

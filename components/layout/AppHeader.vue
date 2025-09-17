@@ -70,16 +70,16 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const router = useRouter()
 
-const currentLocale = ref('es')
+const currentLocale = ref('en')
 
-if (route.path.startsWith('/en')) {
-    currentLocale.value = 'en'
+if (route.path.startsWith('/es')) {
+    currentLocale.value = 'es'
 }
 
 const { locale, locales, setLocale } = useI18n()
 function change() {
     setLocale(currentLocale.value)
-    router.push(currentLocale.value === 'es' ? '/' : '/en')
+    router.push(currentLocale.value === 'es' ? '/es' : '/')
 }
 
 onMounted(() => {

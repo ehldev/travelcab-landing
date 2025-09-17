@@ -59,7 +59,39 @@
   },
   "testimonials": {
     "title": "Opiniones reales de nuestros pasajeros",
-    "link": "Ver más reseñas en TripAdvisor"
+    "link": "Ver más reseñas en TripAdvisor",
+    "list": [
+      {
+        "name": "Beatriz S",
+        "subtitle": "Servicio de transporte profesional y cortés",
+        "description": "Nuestro transporte al aeropuerto fue rápido, cortés y profesional! El viaje fue suave y nuestro conductor recibió consejos útiles para el nuevo aeropuerto. Él era muy servicial con nuestro equipaje. ¡Gracias! Recomiendo Travelcab Perú para sus transpiraciones en Lima!"
+      },
+      {
+        "name": "Cika D",
+        "subtitle": "Excelente servicio",
+        "description": "Enzo era muy amable y respondió a cualquier pregunta que tuvimos. Era muy profesional. Lo recomendaría encarecidamente a él y a la compañía."
+      },
+      {
+        "name": "Franco Z",
+        "subtitle": "Muy cómodo, 100% recomendado",
+        "description": "Excelente servicio de traslado ida y vuelta al aeropuerto, puntual y autos muy cómodos. 100% recomendados. Desde ya 8 meses lo utilizo para todos mis viajes al aeropuerto."
+      },
+      {
+        "name": "Katherin",
+        "subtitle": "Servicio de 5 estrellas",
+        "description": "Todo perfecto, el carro muy limpio el conductor muy amable me ayudó con mis maletas. Mi vuelo se retrasó un poco y tuvieron la amabilidad de esperarme, servicio 5 estrellas."
+      },
+      {
+        "name": "Olga R",
+        "subtitle": "Viva Perú!!",
+        "description": "Hermoso Perú, volveré. El taxi que me llevo excelente, autos muy modernos y los choferes muy pulcros. Excelentes los lugares que visité muy lindos. Me encantó el zoológico. Que hermosos los animales!! muy bien protegidos. Me quedé con ganas de comer más ceviche."
+      },
+      {
+        "name": "Pamela A",
+        "subtitle": "Excelente",
+        "description": "Todo estuvo bien, se coordinó con anticipación el servicio, llegaron puntuales, nos espero, ayudo con el equipaje, consulto ruta, horario del vuelo, ingreso al aeropuerto. Servicio de primera"
+      }
+    ]
   },
   "support": {
     "title": "Atención y soporte sin \n interrupciones en Lima",
