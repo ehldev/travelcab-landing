@@ -16,6 +16,12 @@ import { useI18n } from 'vue-i18n'
 import AppHeader from '~/components/layout/AppHeader.vue'
 import AppFooter from '~/components/layout/AppFooter.vue'
 
+useHead({
+  link: [
+    { rel: 'icon', type: 'image/png', href: '/favicon.png', sizes: '32x32' }
+  ]
+})
+
 onMounted(() => {
   const route = useRoute()
   const { locale, setLocale } = useI18n()
