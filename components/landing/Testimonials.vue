@@ -17,7 +17,11 @@
                 <figure class="card p-6" data-aos="fade-up" data-aos-delay="0">
                     <div class="flex items-center gap-3">
                         <img src="@/assets/images/testimonials/beatriz-s.jpg" alt="Avatar de cliente"
-                            class="h-10 w-10 rounded-full object-cover" loading="lazy" decoding="async">
+                            class="h-10 w-10 rounded-full object-cover" loading="lazy" decoding="async" v-if="locale === 'es'">
+
+                        <img src="@/assets/images/testimonials/en-philip.jpg" alt="Avatar de cliente"
+                            class="h-10 w-10 rounded-full object-cover" loading="lazy" decoding="async" v-else>
+
                         <figcaption>
                             <div class="font-semibold text-slate-900 leading-tight">{{ t('testimonials.list.0.name') }}</div>
                             <div class="text-xs text-slate-500">Desde TripAdvisor</div>
@@ -43,8 +47,11 @@
                 <!-- Item -->
                 <figure class="card p-6" data-aos="fade-up" data-aos-delay="50">
                     <div class="flex items-center gap-3">
-                        <img src="@/assets/images/testimonials/zika-d.jpg" alt="Avatar de cliente"
-                            class="h-10 w-10 rounded-full object-cover" loading="lazy">
+                        <img src="@/assets/images/testimonials/hernando-z.jpg" alt="Avatar de cliente"
+                            class="h-10 w-10 rounded-full object-cover" loading="lazy" v-if="locale === 'es'">
+
+                        <img src="@/assets/images/testimonials/en-laura.jpg" alt="Avatar de cliente"
+                            class="h-10 w-10 rounded-full object-cover" loading="lazy" v-else>
                         <figcaption>
                             <div class="font-semibold text-slate-900 leading-tight">{{ t('testimonials.list.1.name') }}</div>
                             <div class="text-xs text-slate-500">Desde TripAdvisor</div>
@@ -65,7 +72,9 @@
                 <figure class="card p-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center gap-3">
                         <img src="@/assets/images/testimonials/franco-z.jpg" alt="Avatar de cliente"
-                            class="h-10 w-10 rounded-full object-cover" loading="lazy">
+                            class="h-10 w-10 rounded-full object-cover" loading="lazy" v-if="locale === 'es'">
+                        <img src="@/assets/images/testimonials/en-melissa-l.jpg" alt="Avatar de cliente"
+                            class="h-10 w-10 rounded-full object-cover" loading="lazy" v-else>
                         <figcaption>
                             <div class="font-semibold text-slate-900 leading-tight">{{ t('testimonials.list.2.name') }}</div>
                             <div class="text-xs text-slate-500">Desde TripAdvisor</div>
@@ -86,7 +95,9 @@
                 <figure class="card p-6" data-aos="fade-up" data-aos-delay="150">
                     <div class="flex items-center gap-3">
                         <img src="@/assets/images/testimonials/katherine.jpg" alt="Avatar de cliente"
-                            class="h-10 w-10 rounded-full object-cover" loading="lazy">
+                            class="h-10 w-10 rounded-full object-cover" loading="lazy" v-if="locale === 'es'">
+                        <img src="@/assets/images/testimonials/en-jose.jpg" alt="Avatar de cliente"
+                            class="h-10 w-10 rounded-full object-cover" loading="lazy" v-else>
                         <figcaption>
                             <div class="font-semibold text-slate-900 leading-tight">{{ t('testimonials.list.3.name') }}</div>
                             <div class="text-xs text-slate-500">Desde TripAdvisor</div>
@@ -107,7 +118,9 @@
                 <figure class="card p-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-center gap-3">
                         <img src="@/assets/images/testimonials/olga.jpg" alt="Avatar de cliente"
-                            class="h-10 w-10 rounded-full object-cover" loading="lazy">
+                            class="h-10 w-10 rounded-full object-cover" loading="lazy" v-if="locale === 'es'">
+                        <img src="@/assets/images/testimonials/en-allison.jpg" alt="Avatar de cliente"
+                            class="h-10 w-10 rounded-full object-cover" loading="lazy" v-else>
                         <figcaption>
                             <div class="font-semibold text-slate-900 leading-tight">{{ t('testimonials.list.4.name') }}</div>
                             <div class="text-xs text-slate-500">Desde TripAdvisor</div>
@@ -128,7 +141,9 @@
                 <figure class="card p-6" data-aos="fade-up" data-aos-delay="250">
                     <div class="flex items-center gap-3">
                         <img src="@/assets/images/testimonials/pamela.jpg" alt="Avatar de cliente"
-                            class="h-10 w-10 rounded-full object-cover" loading="lazy">
+                            class="h-10 w-10 rounded-full object-cover" loading="lazy" v-if="locale === 'es'">
+                        <img src="@/assets/images/testimonials/en-seth.jpg" alt="Avatar de cliente"
+                            class="h-10 w-10 rounded-full object-cover" loading="lazy" v-else>
                         <figcaption>
                             <div class="font-semibold text-slate-900 leading-tight">{{ t('testimonials.list.5.name') }}</div>
                             <div class="text-xs text-slate-500">Desde TripAdvisor</div>
@@ -158,5 +173,5 @@
 </template>
 
 <script setup>
-const { t } = useI18n()
+const { t, locale } = useI18n()
 </script>
