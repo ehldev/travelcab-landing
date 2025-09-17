@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     workbox: {
       navigateFallback: '/offline', // o '/offline.html' si usas public/offline.html
       navigateFallbackAllowlist: [/^\/.*/],
-      globPatterns: ['**/*.{js,css,html,ico,png,webp,woff2}'],
+      globPatterns: ['**/*.{js,css,html,ico,png,webp,woff2,json}'],
     },
     includeAssets: [
       // 'offline.html',        // si usas archivo en /public
