@@ -43,7 +43,7 @@ export default defineNuxtConfig({
   // 👇 Muy importante: dile a Nitro que prerenderice las rutas necesarias
   nitro: {
     prerender: {
-      routes: ['/', '/en'] // asegura que / esté en el build estático
+      routes: ['/', '/es'] // asegura que / esté en el build estático
     }
   }
 })
