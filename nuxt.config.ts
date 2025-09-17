@@ -31,6 +31,7 @@ export default defineNuxtConfig({
       navigateFallback: '/offline', // o '/offline.html' si usas public/offline.html
       navigateFallbackAllowlist: [/^\/.*/],
       globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,woff2}'],
+      maximumFileSizeToCacheInBytes: 6 * 1024 * 1024
     },
     includeAssets: [
       // 'offline.html',        // si usas archivo en /public
