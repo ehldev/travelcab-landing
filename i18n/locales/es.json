@@ -1,0 +1,107 @@
+{
+  "header": {
+    "nav": {
+      "services": "Servicios",
+      "about": "Nosotros",
+      "testimonials": "Testimonios",
+      "button": "Reserva tu taxi"
+    }
+  },
+  "banner": {
+    "title": "Taxi seguro \n en Lima",
+    "description": "Somos Travelcab, especialistas en taxi seguro en Lima, con traslados premium al aeropuerto y la ciudad, servicio por horas y transporte corporativo con las mejores tarifas.",
+    "description2": "Atención y reservas disponibles las 24 horas",
+    "button1": "Reservar ahora",
+    "button2": "Whatsapp",
+    "or": "O",
+    "card": {
+      "title": "¿Por qué Travelcab?",
+      "features": [
+        "Camionetas, Vans y Minibuses premium (seguras y cómodas).",
+        "Atención bilingüe 24/7 (inglés y español).",
+        "Conductores verificados, ejecutivos y profesionales.",
+        "Lunas polarizadas con láminas de seguridad."
+      ]
+    }
+  },
+  "banner2": {
+    "title": "Miembro oficial de la Asociación Peruana de Hoteles y Restaurantes"
+  },
+  "services": {
+    "title": "Servicios de taxi premium en Lima",
+    "description": "Empresa de taxi en Lima con traslados al aeropuerto, servicio por horas y transporte corporativo.",
+    "items": [
+      {
+        "title": "Traslados al aeropuerto",
+        "description": "Llega puntual y sin complicaciones con nuestro servicio de traslados hacia y desde el aeropuerto Jorge Chávez con conductores profesionales."
+      },
+      {
+        "title": "Servicio por horas",
+        "description": "Reserva un vehículo con chofer por horas y muévete con flexibilidad. Ideal para reuniones, visitas o recorridos por la ciudad."
+      },
+      {
+        "title": "Transporte corporativo",
+        "description": "Ofrecemos soluciones de movilidad para empresas y ejecutivos: rutas planificadas, facturación sencilla y atención personalizada."
+      }
+    ],
+    "button": "Reserva ahora"
+  },
+  "about": {
+    "title": "Somos Travelcab, tu empresa de taxi premium en Lima",
+    "description": "En Travelcab redefinimos el concepto de movilidad en Lima. Somos una empresa de taxi premium que combina seguridad, puntualidad y confort en cada traslado. Nuestro propósito es brindar una experiencia de transporte confiable y exclusiva para turistas, ejecutivos y familias que buscan un taxi seguro en Lima",
+    "features": [
+      "Aliados de hoteles y empresas en Lima.",
+      "Movilidad corporativa diseñada para ejecutivos.",
+      "Respaldados por viajeros internacionales.",
+      "Transporte exclusivo con SUVs, Vans y Minibuses ejecutivas."
+    ],
+    "button": "Solicitar información"
+  },
+  "testimonials": {
+    "title": "Opiniones reales de nuestros pasajeros",
+    "link": "Ver más reseñas en TripAdvisor"
+  },
+  "support": {
+    "title": "Atención y soporte sin \n interrupciones en Lima",
+    "description": "En Travelcab nos comprometemos a que llegues puntual y sin estrés. Con nuestro equipo de atención disponible las 24 horas, siempre tendrás a alguien listo para ayudarte antes, durante y después de tu viaje.",
+    "card1": {
+      "title": "Confiable",
+      "description": "Puntualidad y seguridad en cada traslado."
+    },
+    "card2": {
+      "title": "Soporte",
+      "description": "Atención personalizada de día y de noche."
+    }
+  },
+  "footer": {
+    "description1": "{first}, una empresa de transporte premium en Lima. Ofrecemos traslados seguros hacia y desde el aeropuerto Jorge Chávez, además de movilidad a otros destinos de la ciudad. Nuestros conductores profesionales y vehículos cómodos garantizan que llegues puntual y sin complicaciones.",
+    "description2": "Atendemos las 24 horas del día, todos los días de la semana, para turistas, ejecutivos y empresas que buscan un servicio de taxi seguro y confiable en Lima. Reserva fácilmente a través de nuestra plataforma y viaja con tranquilidad.",
+    "services": {
+      "title": "Servicios",
+      "list": [
+        "Traslados al aeropuerto",
+        "Servicio por horas",
+        "Transporte corporativo"
+      ]
+    },
+    "company": {
+      "title": "Empresa",
+      "list": [
+        "Nosotros",
+        "Testimonios",
+        "Trabaja con nosotros"
+      ]
+    },
+    "contact": {
+      "title": "Contacto"
+    },
+    "footerDetails": {
+      "text": "Todos los derechos reservados.",
+      "links": [
+        "Política de privacidad",
+        "Términos y condiciones",
+        "Configuración de cookies"
+      ]
+    }
+  }
+}

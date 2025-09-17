@@ -1,0 +1,107 @@
+{
+  "header": {
+    "nav": {
+      "services": "Services",
+      "about": "About us",
+      "testimonials": "Reviews",
+      "button": "Book now"
+    }
+  },
+  "banner": {
+    "title": "Safe taxi \n in Lima",
+    "description": "We are Travelcab, specialists in safe taxi in Lima with premium airport and city transfers, hourly service, and corporate transport at fixed rates.",
+    "description2": "24/7 support and bookings",
+    "button1": "Book now",
+    "button2": "Whatsapp",
+    "or": "OR",
+    "card": {
+      "title": "Why Travelcab?",
+      "features": [
+        "Premium SUVs, Vans, and Minibuses (safe and comfortable).",
+        "Bilingual 24/7 support (English and Spanish).",
+        "Verified, professional drivers.",
+        "Tinted windows with safety film."
+      ]
+    }
+  },
+  "banner2": {
+    "title": "Official member of the Peruvian Association of Hotels and Restaurants"
+  },
+  "services": {
+    "title": "Premium Taxi Services in Lima",
+    "description": "Taxi company in Lima offering airport transfers, hourly service, and corporate transport.",
+    "items": [
+      {
+        "title": "Airport Transfers",
+        "description": "Arrive on time and stress-free with our professional drivers. Reliable rides to and from Jorge Chávez International Airport."
+      },
+      {
+        "title": "Hourly Service",
+        "description": "Book a vehicle with driver by the hour and move around with flexibility. Ideal for meetings, visits, or city tours."
+      },
+      {
+        "title": "Corporate Transport",
+        "description": "Tailored mobility solutions for companies and executives: planned routes, easy invoicing, and personalized service."
+      }
+    ],
+    "button": "Book now"
+  },
+  "about": {
+    "title": "We are Travelcab, your premium taxi company in Lima",
+    "description": "At Travelcab, we redefine mobility in Lima. We are a premium taxi company that combines safety, punctuality, and comfort in every ride. Our purpose is to provide a reliable and exclusive transport experience for tourists, executives, and families looking for a safe taxi service in Lima.",
+    "features": [
+      "Trusted partner of hotels and companies in Lima.",
+      "Corporate mobility tailored for executives.",
+      "Endorsed by international travelers.",
+      "Executive SUVs, Vans, and Minibuses for exclusive transport."
+    ],
+    "button": "Request information"
+  },
+  "testimonials": {
+    "title": "What travelers say about Travelcab",
+    "link": "See more reviews on TripAdvisor"
+  },
+  "support": {
+    "title": "Uninterrupted support in Lima",
+    "description": "At Travelcab, we make sure you arrive on time and stress-free. With our 24/7 support team, there is always someone ready to assist you before, during, and after your trip.",
+    "card1": {
+      "title": "Reliable",
+      "description": "Punctuality and safety in every ride."
+    },
+    "card2": {
+      "title": "Support",
+      "description": "Personalized assistance day and night."
+    }
+  },
+  "footer": {
+    "description1": "{first}, a premium transport company in Lima. We offer safe transfers to and from Jorge Chávez International Airport, as well as to other destinations across the city. Our professional drivers and comfortable vehicles ensure you arrive on time and without stress.",
+    "description2": "We are available 24/7, every day of the week, serving tourists, executives, and companies looking for a safe and reliable taxi service in Lima. Book easily through our platform and travel with peace of mind.",
+    "services": {
+      "title": "Services",
+      "list": [
+        "Airport Transfers",
+        "Hourly Service",
+        "Corporate Transport"
+      ]
+    },
+    "company": {
+      "title": "Company",
+      "list": [
+        "About Us",
+        "Reviews",
+        "Careers"
+      ]
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "footerDetails": {
+      "text": "All rights reserved.",
+      "links": [
+        "Privacy Policy",
+        "Terms & Conditions",
+        "Cookie Settings"
+      ]
+    }
+  }
+}

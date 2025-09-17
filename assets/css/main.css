@@ -1,0 +1,46 @@
+:root {
+  --bg: 245 247 251;
+  /* #F5F7FB */
+  --text: 15 23 42;
+  /* slate-900 */
+  --muted: 71 85 105;
+  /* slate-600 */
+  --surface: 255 255 255;
+  /* white */
+  --border: 226 232 240;
+  /* slate-200 */
+}
+
+html {
+  color-scheme: light
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--text));
+}
+
+.card {
+  background: rgb(var(--surface));
+  border: 1px solid rgb(var(--border));
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, .06);
+}
+
+.focus-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(54, 94, 255, .35);
+}
+
+.section {
+  padding-top: clamp(3rem, 6vw, 6rem);
+  padding-bottom: clamp(3rem, 6vw, 6rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: .001ms !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important
+  }
+}
