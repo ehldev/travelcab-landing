@@ -16,10 +16,10 @@
                 aria-hidden="true"></i><span>{{ t('about.features.3') }}</span></li>
           </ul>
           <div class="mt-8" data-aos="fade-up" data-aos-delay="150">
-            <a href="https://wa.me/+51934791872"
+            <button type="button" @click="isOpen = true"
               class="focus-ring inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-tc-blue hover:bg-tc-bluedark text-white font-semibold">
               <i class="ri-chat-3-fill" aria-hidden="true"></i> {{ t('about.button') }}
-            </a>
+            </button>
           </div>
         </div>
 
@@ -28,9 +28,16 @@
             class="rounded-xl w-full h-400px md:h-[500px]" loading="lazy" decoding="async">
         </div>
       </div>
+
+      <ContactModal v-model:open="isOpen" @submit="handleSubmit" />
     </section>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
+import ContactModal from '~/components/landing/ContactModal.vue'
 const { t } = useI18n()
+
+const isOpen = ref(false)
 </script>

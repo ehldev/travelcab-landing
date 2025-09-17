@@ -36,7 +36,7 @@ export default defineNuxtConfig({
       // 'offline.html',        // si usas archivo en /public
       // 'icon-192x192.png',
       // 'icon-512x512.png',
-      'banner.jpg'
+      // 'banner.jpg'
     ],
   },
 
