@@ -23,7 +23,7 @@
             <!-- Header -->
             <div class="px-10 pt-10 pr-12">
               <h2 :id="titleId" class="text-[20px] md:text-[26px] font-bold leading-tight">
-                Solicita información sobre nuestros servicios
+                {{ t('about.modal.title') }}
               </h2>
 
               <!-- Close -->
@@ -46,28 +46,28 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <!-- Nombre -->
                 <label class="block">
-                  <span class="sr-only">Nombre</span>
+                  <span class="sr-only">{{ t('about.modal.form.name') }}</span>
                   <input
                     v-model.trim="form.nombre"
                     type="text"
-                    placeholder="Nombre"
+                    :placeholder="t('about.modal.form.name')"
                     @blur="v$.form.nombre.$touch()"
                     :aria-invalid="v$.form.nombre.$error"
                     class="w-full rounded-xl bg-white/5 border px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
                     :class="v$.form.nombre.$error ? 'border-red-500/70' : 'border-white/10'"
                   />
                   <p v-if="v$.form.nombre.$error" class="mt-1 text-xs text-red-400">
-                    {{ nombreMsg }}
+                    {{ nameMsg }}
                   </p>
                 </label>
 
                 <!-- Email -->
                 <label class="block">
-                  <span class="sr-only">Correo electrónico</span>
+                  <span class="sr-only">{{ t('about.modal.form.email') }}</span>
                   <input
                     v-model.trim="form.email"
                     type="email"
-                    placeholder="Correo electrónico"
+                    :placeholder="t('about.modal.form.email')"
                     @blur="v$.form.email.$touch()"
                     :aria-invalid="v$.form.email.$error"
                     class="w-full rounded-xl bg-white/5 border px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
@@ -80,46 +80,46 @@
 
                 <!-- RUC (opcional) -->
                 <label class="block">
-                  <span class="sr-only">RUC</span>
+                  <span class="sr-only">{{ t('about.modal.form.ruc') }}</span>
                   <input
                     v-model.trim="form.ruc"
                     type="text"
-                    placeholder="RUC"
+                    :placeholder="t('about.modal.form.ruc')"
                     @blur="v$.form.ruc.$touch()"
                     :aria-invalid="v$.form.ruc.$error"
                     class="w-full rounded-xl bg-white/5 border px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
                     :class="v$.form.ruc.$error ? 'border-red-500/70' : 'border-white/10'"
                   />
                   <p v-if="v$.form.ruc.$error" class="mt-1 text-xs text-red-400">
-                    Debe tener 11 dígitos numéricos.
+                    {{ locale === 'es' ? 'El RUC debe tener 11 dígitos.' : 'RUC must be 11 digits.' }}
                   </p>
                 </label>
 
                 <!-- Celular -->
                 <label class="block">
-                  <span class="sr-only">Celular</span>
+                  <span class="sr-only">{{ t('about.modal.form.phone') }}</span>
                   <input
                     v-model.trim="form.telefono"
                     type="tel"
-                    placeholder="Celular"
+                    :placeholder="t('about.modal.form.phone')"
                     @blur="v$.form.telefono.$touch()"
                     :aria-invalid="v$.form.telefono.$error"
                     class="w-full rounded-xl bg-white/5 border px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
                     :class="v$.form.telefono.$error ? 'border-red-500/70' : 'border-white/10'"
                   />
                   <p v-if="v$.form.telefono.$error" class="mt-1 text-xs text-red-400">
-                    Ingresa solo dígitos (mín. 6).
+                    {{ locale === 'es' ? 'Ingresa solo dígitos (mín. 6).' : 'Enter only digits (min. 6).' }}
                   </p>
                 </label>
               </div>
 
               <!-- Mensaje -->
               <label class="block">
-                <span class="sr-only">Mensaje</span>
+                <span class="sr-only">{{ t('about.modal.form.message') }}</span>
                 <textarea
                   v-model.trim="form.mensaje"
                   rows="3"
-                  placeholder="Indica tu consulta o mensaje"
+                  :placeholder="t('about.modal.form.message')"
                   @blur="v$.form.mensaje.$touch()"
                   class="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2.5 outline-none placeholder-white/40 text-white focus:border-white/30"
                 ></textarea>
@@ -129,9 +129,9 @@
                 <button
                   type="submit"
                   :disabled="v$.$invalid && v$.$dirty"
-                  class="w-full d-flex justift-center items-center gap-2 rounded-3xl bg-[#10B981] px-4 py-2.5 font-medium text-white hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 disabled:opacity-50 disabled:cursor-not-allowed"
+                  class="w-full d-flex justift-center items-center gap-2 rounded-3xl bg-[#365EFF] px-4 py-2.5 font-medium text-white hover:bg-[#365EFF] focus:outline-none focus:ring-2 focus:ring-emerald-400 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Solicitar
+                  {{ t('about.modal.form.button') }}
                 </button>
               </div>
             </form>
@@ -146,6 +146,8 @@
 import { reactive, onMounted, onBeforeUnmount, computed, watch } from 'vue'
 import useVuelidate from '@vuelidate/core'
 import { required, email, minLength, helpers } from '@vuelidate/validators'
+
+const { t, locale } = useI18n()
 
 const props = defineProps<{ open: boolean }>()
 const emit = defineEmits<{
@@ -180,17 +182,17 @@ const rules = computed(() => ({
 const v$ = useVuelidate(rules, { form })
 
 /* Mensajes */
-const nombreMsg = computed(() => {
+const nameMsg = computed(() => {
   if (!v$.value.form.nombre.$dirty) return ''
-  if (v$.value.form.nombre.required.$invalid) return 'El nombre es obligatorio.'
-  if (v$.value.form.nombre.minLength.$invalid) return 'Mínimo 2 caracteres.'
+  if (v$.value.form.nombre.required.$invalid) return locale.value === 'es' ? 'El nombre es obligatorio.' : 'Name is required.'
+  if (v$.value.form.nombre.minLength.$invalid) return locale.value === 'es' ? 'Mínimo 2 caracteres.' : 'Minimum 2 characters.'
   return ''
 })
 
 const emailMsg = computed(() => {
   if (!v$.value.form.email.$dirty) return ''
-  if (v$.value.form.email.required.$invalid) return 'El correo es obligatorio.'
-  if (v$.value.form.email.email.$invalid) return 'Formato de correo inválido.'
+  if (v$.value.form.email.required.$invalid) return locale.value === 'es' ? 'El correo es obligatorio.' : 'Email is required.'
+  if (v$.value.form.email.email.$invalid) return locale.value === 'es' ? 'Formato de correo inválido.' : 'Invalid email format.'
   return ''
 })
 

@@ -55,7 +55,18 @@
       "Respaldados por viajeros internacionales.",
       "Transporte exclusivo con SUVs, Vans y Minibuses ejecutivas."
     ],
-    "button": "Solicitar información"
+    "button": "Solicitar información",
+    "modal": {
+      "title": "Solicita información sobre nuestros servicios",
+      "form": {
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "ruc": "RUC (opcional)",
+        "phone": "celular",
+        "message": "Indica tu consulta o mensaje",
+        "button": "Solicitar"
+      }
+    }
   },
   "testimonials": {
     "title": "Opiniones reales de nuestros pasajeros",

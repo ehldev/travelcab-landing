@@ -55,7 +55,18 @@
       "Endorsed by international travelers.",
       "Executive SUVs, Vans, and Minibuses for exclusive transport."
     ],
-    "button": "Request information"
+    "button": "Request information",
+    "modal": {
+      "title": "Request information about our services",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "ruc": "RUC (optional)",
+        "phone": "Mobile",
+        "message": "Indicate your inquiry or message",
+        "button": "Request"
+      }
+    }
   },
   "testimonials": {
     "title": "What travelers say about Travelcab",
@@ -94,7 +105,7 @@
     ]
   },
   "support": {
-    "title": "Uninterrupted support in Lima",
+    "title": "24/7 support in Lima",
     "description": "At Travelcab, we make sure you arrive on time and stress-free. With our 24/7 support team, there is always someone ready to assist you before, during, and after your trip.",
     "card1": {
       "title": "Reliable",

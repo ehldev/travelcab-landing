@@ -6,7 +6,7 @@
             <div class="flex items-end justify-between gap-4">
                 <h2 id="testimonials-title" class="text-3xl md:text-4xl font-bold text-slate-900">{{ t('testimonials.title') }}</h2>
                 <!-- CTA global opcional -->
-                <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
+                <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294316-d27469003-Reviews-Travelcab_Peru-Lima_Lima_Region.html" target="_blank" rel="noopener nofollow"
                     class="hidden md:inline-flex items-center gap-2 text-sm font-medium text-tc-blue hover:underline">
                     {{ t('testimonials.link') }} <i class="ri-arrow-right-up-line"></i>
                 </a>
@@ -34,7 +34,7 @@
                         {{ t('testimonials.list.0.description') }}
                     </p>
 
-                    <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
+                    <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294316-d27469003-Reviews-Travelcab_Peru-Lima_Lima_Region.html" target="_blank" rel="noopener nofollow"
                         class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-tc-blue hover:underline">
                         Leer más <i class="ri-arrow-right-up-line"></i>
                     </a>
@@ -56,7 +56,7 @@
                     </div>
                     <h3 class="mt-3 text-lg font-semibold text-slate-900">{{ t('testimonials.list.1.subtitle') }}</h3>
                     <p class="mt-2 text-slate-600">{{ t('testimonials.list.1.description') }}</p>
-                    <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
+                    <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294316-d27469003-Reviews-Travelcab_Peru-Lima_Lima_Region.html" target="_blank" rel="noopener nofollow"
                         class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-tc-blue hover:underline">Leer
                         más <i class="ri-arrow-right-up-line"></i></a>
                 </figure>
@@ -77,7 +77,7 @@
                     </div>
                     <h3 class="mt-3 text-lg font-semibold text-slate-900">{{ t('testimonials.list.2.subtitle') }}</h3>
                     <p class="mt-2 text-slate-600">{{ t('testimonials.list.2.description') }}</p>
-                    <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
+                    <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294316-d27469003-Reviews-Travelcab_Peru-Lima_Lima_Region.html" target="_blank" rel="noopener nofollow"
                         class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-tc-blue hover:underline">Leer
                         más <i class="ri-arrow-right-up-line"></i></a>
                 </figure>
@@ -98,7 +98,7 @@
                     </div>
                     <h3 class="mt-3 text-lg font-semibold text-slate-900">{{ t('testimonials.list.3.subtitle') }}</h3>
                     <p class="mt-2 text-slate-600">{{ t('testimonials.list.3.description') }}</p>
-                    <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
+                    <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294316-d27469003-Reviews-Travelcab_Peru-Lima_Lima_Region.html" target="_blank" rel="noopener nofollow"
                         class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-tc-blue hover:underline">Leer
                         más <i class="ri-arrow-right-up-line"></i></a>
                 </figure>
@@ -119,7 +119,7 @@
                     </div>
                     <h3 class="mt-3 text-lg font-semibold text-slate-900">{{ t('testimonials.list.4.subtitle') }}</h3>
                     <p class="mt-2 text-slate-600">{{ t('testimonials.list.4.description') }}</p>
-                    <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
+                    <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294316-d27469003-Reviews-Travelcab_Peru-Lima_Lima_Region.html" target="_blank" rel="noopener nofollow"
                         class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-tc-blue hover:underline">Leer
                         más <i class="ri-arrow-right-up-line"></i></a>
                 </figure>
@@ -140,7 +140,7 @@
                     </div>
                     <h3 class="mt-3 text-lg font-semibold text-slate-900">{{ t('testimonials.list.5.subtitle') }}</h3>
                     <p class="mt-2 text-slate-600">{{ t('testimonials.list.5.description') }}</p>
-                    <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
+                    <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294316-d27469003-Reviews-Travelcab_Peru-Lima_Lima_Region.html" target="_blank" rel="noopener nofollow"
                         class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-tc-blue hover:underline">Leer
                         más <i class="ri-arrow-right-up-line"></i></a>
                 </figure>
@@ -148,9 +148,9 @@
 
             <!-- CTA global visible en mobile -->
             <div class="mt-8 flex justify-center md:hidden">
-                <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener nofollow"
+                <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294316-d27469003-Reviews-Travelcab_Peru-Lima_Lima_Region.html" target="_blank" rel="noopener nofollow"
                     class="focus-ring inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-tc-blue hover:bg-tc-bluedark text-white font-semibold">
-                    <i class="ri-external-link-line" aria-hidden="true"></i> Ver más reseñas en TripAdvisor
+                    <i class="ri-external-link-line" aria-hidden="true"></i> {{ t('testimonials.link') }}
                 </a>
             </div>
         </div>
