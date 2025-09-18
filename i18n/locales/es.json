@@ -130,9 +130,9 @@
     "company": {
       "title": "Empresa",
       "list": [
+        "Servicios",
         "Nosotros",
-        "Testimonios",
-        "Trabaja con nosotros"
+        "Testimonios"
       ]
     },
     "contact": {

@@ -43,9 +43,9 @@
                 <nav class="md:col-span-2" aria-labelledby="ft-company">
                     <h3 id="ft-company" class="text-white font-semibold text-lg">{{ $t("footer.company.title") }}</h3>
                     <ul class="mt-4 space-y-3 text-[15px]">
-                        <li><a href="#about" class="hover:text-white">{{ $t("footer.company.list.0") }}</a></li>
-                        <li><a href="#testimonials" class="hover:text-white">{{ $t("footer.company.list.1") }}</a></li>
-                        <li><a href="#" class="hover:text-white">{{ $t("footer.company.list.2") }}</a></li>
+                        <li><a href="#services" class="hover:text-white">{{ $t("footer.company.list.0") }}</a></li>
+                        <li><a href="#about" class="hover:text-white">{{ $t("footer.company.list.1") }}</a></li>
+                        <li><a href="#testimonials" class="hover:text-white">{{ $t("footer.company.list.2") }}</a></li>
                     </ul>
                 </nav>
 
@@ -74,23 +74,15 @@
 
                     <!-- Redes -->
                     <div class="mt-6 flex items-center gap-3" aria-label="Redes sociales">
-                        <a href="#" aria-label="Facebook"
+                        <a href="https://www.facebook.com/TravelCabPeru" aria-label="Facebook"
                             class="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full bg-slate-800 hover:bg-slate-700">
                             <i class="ri-facebook-circle-fill text-white text-2xl" aria-hidden="true"></i>
                         </a>
-                        <a href="#" aria-label="TikTok"
-                            class="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full bg-slate-800 hover:bg-slate-700">
-                            <i class="ri-tiktok-fill text-white text-2xl" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" aria-label="Instagram"
+                        <a href="https://www.instagram.com/travelcab.peru/" aria-label="Instagram"
                             class="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full bg-slate-800 hover:bg-slate-700">
                             <i class="ri-instagram-line text-white text-2xl" aria-hidden="true"></i>
                         </a>
-                        <a href="#" aria-label="YouTube"
-                            class="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full bg-slate-800 hover:bg-slate-700">
-                            <i class="ri-youtube-fill text-white text-2xl" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" aria-label="LinkedIn"
+                        <a href="https://www.linkedin.com/company/travelcab/?originalSubdomain=pe" aria-label="LinkedIn"
                             class="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full bg-slate-800 hover:bg-slate-700">
                             <i class="ri-linkedin-box-fill text-white text-2xl" aria-hidden="true"></i>
                         </a>
